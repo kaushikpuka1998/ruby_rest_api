@@ -8,7 +8,7 @@ class Api::V1::SessionsController < Devise::SessionsController
       sign_in "user",@user
       json_response "Signed In Successfully",true,{user: @user}, :ok
     else
-      json_response "Unauthorized",false,{},:Unauthorized
+      json_response "Unauthorized",false,{},:unauthorized
 
     end
   end
@@ -26,7 +26,7 @@ class Api::V1::SessionsController < Devise::SessionsController
     if @user
       return @user
     else
-      json_response "Cannot find User",false,{},:failure
+      json_response "Cannot find User", false, {}, :unprocessable_entity
     end
   end
 end
