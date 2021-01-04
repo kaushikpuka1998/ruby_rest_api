@@ -12,7 +12,7 @@ before_action :ensure_params_exist,only: :create
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation)#paremeters initialized
   end
 
   def ensure_params_exist
