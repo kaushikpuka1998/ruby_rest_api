@@ -60,3 +60,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'simple_token_authentication', '~> 1.0' # see semver.org
+
+gem "koala","~>3.0.0"
+
+gem 'omniauth-facebook'
+
+

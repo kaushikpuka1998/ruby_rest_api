@@ -20,7 +20,7 @@ class Api::V1::SessionsController < Devise::SessionsController
   #logout
   def destroy
     sign_out @user
-
+    @user.generate_unique_authentication_token
     json_response "Successfully Logged out",true,{}, :ok
 
   end

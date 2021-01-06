@@ -9,7 +9,9 @@ Rails.application.routes.draw do
         post "sign_up", to: "registrations#create"
         post "sign_in", to: "sessions#create"
         delete "log_out", to: "sessions#destroy"
+        post "facebook", to: "users#facebook"
       end
+      
     end
   end
 end
